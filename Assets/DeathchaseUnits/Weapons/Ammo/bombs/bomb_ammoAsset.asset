@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fdd388fba2e8c4ea0681b8a60012f9, type: 3}
+  m_Name: bomb_ammoAsset
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: 3294041875585945665, guid: 1cfbd6739c7306947b5291ddcf567c5e,
+    type: 3}
+  m_defaultNumberToPool: 5
+  m_expandablePool: 1
+  m_autoRepoolLife: 0
+  m_ammoSpeed: 10
+  m_damageType: {fileID: 11400000, guid: df43edf92fa6e7342941564104170f5e, type: 2}
+  m_baseDamage: 50
+  m_fuseTime: 1
+  m_effectRadius: 10
+  m_effectDuration: 1

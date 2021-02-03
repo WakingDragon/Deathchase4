@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5480016c3ee024c9069b286d47228a, type: 3}
+  m_Name: gun_fire_pew_cue
+  m_EditorClassIdentifier: 
+  track: 1
+  clips:
+  - {fileID: 8300000, guid: 2d44028d699ddf3418a4393e587dc971, type: 3}
+  randomizeVolPitch: 1
+  minVolume: 0.5
+  maxVolume: 0.8
+  minPitch: 0.63
+  maxPitch: 1.2
+  loop: 0
+  spatialBlend: 0

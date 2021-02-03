@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5480016c3ee024c9069b286d47228a, type: 3}
+  m_Name: menuAmbience_cue
+  m_EditorClassIdentifier: 
+  track: 4
+  clips:
+  - {fileID: 8300000, guid: 7f123f613277ca346a08378488ae4c53, type: 3}
+  - {fileID: 8300000, guid: cf0ac6c24e2c4214d9efc0c1caca07e8, type: 3}
+  - {fileID: 8300000, guid: f340b09900d3c5c4181773bac97dc696, type: 3}
+  - {fileID: 8300000, guid: bf2d72c06556fe8458cd0d3907095137, type: 3}
+  - {fileID: 8300000, guid: d21ca59f0cdac3544ba40a97306c8e1a, type: 3}
+  randomizeVolPitch: 1
+  minVolume: 0.3
+  maxVolume: 0.6
+  minPitch: 0.8
+  maxPitch: 1.2
+  loop: 0
+  spatialBlend: 0

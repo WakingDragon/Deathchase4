@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cad0ea318eceaf44884146f1ee7f08c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_fadeTex: {instanceID: 0}
+  - m_panelToFade: {instanceID: 0}
+  - m_mat: {fileID: 2100000, guid: e11b1f89bb395554b94cb7c39033ca97, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

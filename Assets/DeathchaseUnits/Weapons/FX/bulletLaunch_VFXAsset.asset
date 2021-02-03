@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54b19b161f434946978320d10fbfa4e, type: 3}
+  m_Name: bulletLaunch_VFXAsset
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: 4878016257654420453, guid: 31de4aa9df75a6d4d8e491f0a803270e,
+    type: 3}
+  onStartSFX: {fileID: 11400000, guid: de14e67a055aeb8478a42dad60c074a2, type: 2}
+  onStartSFXIsLocal: 0
+  m_defaultNumberToPool: 20
+  m_expandablePool: 1
+  m_autoRepoolLife: 0.2

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ea33ba25711d84fa49ad5334ec26da, type: 3}
+  m_Name: default_bombWeapon
+  m_EditorClassIdentifier: 
+  m_ammoAsset: {fileID: 11400000, guid: d80daeb3dd617ed408115e8d7706b2eb, type: 2}
+  m_launchFX: {fileID: 0}
+  m_impactFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
+  m_fireInterval: 5

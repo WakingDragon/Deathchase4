@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7649241894463571121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512507395205986834}
+  - component: {fileID: 8394330642511012119}
+  - component: {fileID: 799625298632561545}
+  - component: {fileID: 5987613874949021738}
+  - component: {fileID: 2903494657195218343}
+  - component: {fileID: 546481008060412563}
+  - component: {fileID: 4158198863882619973}
+  m_Layer: 0
+  m_Name: GameSceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512507395205986834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8394330642511012119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f66755b7e655d4ead8554086eb6d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_activateOnStart: 1
+  m_startingLives: 3
+  m_enterTransitionEvent: {fileID: 11400000, guid: 046bd8b2d7e393e4f92fcae4dc0cb599,
+    type: 2}
+  m_exitTransitionEvent: {fileID: 11400000, guid: 59ea3b562021fc440b0ab954214b0faa,
+    type: 2}
+  m_requestPauseGameEvent: {fileID: 11400000, guid: 722b841759e57824b9626308fb7390e2,
+    type: 2}
+  m_requestIntroUIEvent: {fileID: 11400000, guid: 92696c23ba8b9eb4aa53975b2d435a92,
+    type: 2}
+  m_pausePlayEvent: {fileID: 11400000, guid: faa23130740181f42a69190ac404b4e6, type: 2}
+  m_toggleMainMenu: {fileID: 11400000, guid: 0ccb88f56dc5da84bb8f265cf6c4bc43, type: 2}
+  m_onReadyToSetupLevel: {fileID: 11400000, guid: 9eb7d4c1e92d3d9458fea49a3889115b,
+    type: 2}
+  m_closeLevelIntroEvent: {fileID: 11400000, guid: 0b93c4d5a861d8043bb883ba8fffb52f,
+    type: 2}
+  m_startCountdownEvent: {fileID: 11400000, guid: cf0bc427ae32bf247b157de187bc4d71,
+    type: 2}
+  m_transitionDuration: {fileID: 11400000, guid: 045f4a7a217a987438c3688c47348c6b,
+    type: 2}
+--- !u!114 &799625298632561545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78112c13c42d14fb1aac70fd16750c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 952ee34313bb30a4c93f94580ef8f795, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8394330642511012119}
+        m_MethodName: TriggerSetup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5987613874949021738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717b791fe0668b647aae883f0adb923c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levels:
+  - {fileID: 11400000, guid: 63f68dbcc1f143940818c9402f0d5890, type: 2}
+  - {fileID: 11400000, guid: 28174288d6d60544dacb522018df576f, type: 2}
+  m_pool: {fileID: 11400000, guid: 6fce68d18039ad0499081a24ec1e33ed, type: 2}
+--- !u!114 &2903494657195218343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78112c13c42d14fb1aac70fd16750c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: d5711290b4267e04fa6df5ab2a394f6c, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8394330642511012119}
+        m_MethodName: OnAnyKeyDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &546481008060412563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78112c13c42d14fb1aac70fd16750c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6e8e90a627d1187488685695d94dcffa, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8394330642511012119}
+        m_MethodName: OnCountdownFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4158198863882619973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649241894463571121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888827655db2bcb4597e833f8690030a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levelAsset: {fileID: 0}

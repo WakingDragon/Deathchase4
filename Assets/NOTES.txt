@@ -1,0 +1,64 @@
+FUN!
+1. chasing around in madcap way trying to get the baddies without smashing into stuff
+2. loads of cartoonish weps and silly things like that
+
+
+
+TODO
+focus on units and weapons for now!
+> enemies ragdoll when destroyed and crash to the ground in explosion of bits
+> cam stays focused on watching player die - use state stuff for this
+> semi and fully guided missiles
+> trailing smoke/evidence of severe damage
+> slowdown when enemy unit destroyed
+
+> enable pooling of units - make them fit IPoolableAsset
+> level up when win condition met
+> delay play until countdown done
+> revist audio...
+1. manage numbers of voices
+2. switching off between scenes option
+
+> unitasset too complex: lights made part of models and not built by unit, weapon slots should be part of model, not build in unitasset
+> finish in-scene state, level loading, UI, etc.
+> when player dies. camera needs to stay focused on spot where player was. maybe move the focal point
+> simple enemy brain
+> collisions
+> tidy up unitbuilder and asset use
+> spawn big stuff
+> spawn chance drops
+> create weapons and ammo library which can then be referenced in UnitWeapons
+> object pooling improvements - make it use ipoolableasset as the key and not gameobject...?
+> ? static enemies (tower type things)
+> turn FX into a package?
+> revist app controller in similar (simple way) to gamescenecontroller
+> intro scene
+> reduce size of tmpro texture for font
+> !!! issue: when you change pitch of audio it affects the audio source so all audio pitch is changed
+> move core UI into core, seperate out the DC UI into a separate canvas as a prefab
+
+UI best practice: https://unity3d.com/how-to/unity-ui-optimization-tips
+
+AUDIO:
+spatial stuff: can just set spatial to zero to make lister relative pos irrelevant
+?? create a seperate audio IO which can be moved from scene to scene - could carry the listener AND the main srcs
+audio IO (with srcs) needs to follow the main camera (when there is one) ?? 
+
+
+
+TERRAIN GEN TODO
+> TerrainVars: create a default terrain vars and per-level terrain vars which gets set by the level asset so we can change the ground material and other settings
+> there is a lot of switchiing to and from quaternions to euler angles when activating terrain objects. Convert it all to Quaternions
+> limit object placement using perlin, clustering, sea level.
+> maybe make terrain more interesting
+> update all the rocks by setting Materials Creation Mode on prefab to none
+> make system only create tiles ahead of FOV of camera
+
+
+FUTURE DEVS?
+> Incorporate Maze into this terrain gen model as there is a lot of overlap
+> can player dynamically add listeners to unitGO at runtime based on its status? https://docs.unity3d.com/ScriptReference/Events.UnityEvent.AddListener.html
+
+INSTRUCTIONS:
+Requires: Core/ObjectPool - wire up the ObjectPool asset
+Main Camera must have AddCameraToList.cs and relevant Transform_listAsset in place

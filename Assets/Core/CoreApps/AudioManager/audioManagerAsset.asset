@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0807c2413f726b047b632ad541ee47a9, type: 3}
+  m_Name: audioManagerAsset
+  m_EditorClassIdentifier: 
+  m_audioPrefab: {fileID: 4703642771363076808, guid: 293a7708538f13141ae16b8637c47608,
+    type: 3}
+  m_RawChannels:
+  - track: 0
+    mixerGroupName: Master
+    mixerGroup: {fileID: 24300002, guid: 6e0a68d583df788478f24006a0b6d51e, type: 2}
+    audioSource: {fileID: 0}
+    volControlString: MasterVol
+    numVoicesAssigned: 0
+  - track: 1
+    mixerGroupName: SFX
+    mixerGroup: {fileID: -3597146414714487341, guid: 6e0a68d583df788478f24006a0b6d51e,
+      type: 2}
+    audioSource: {fileID: 0}
+    volControlString: SFXVol
+    numVoicesAssigned: 20
+  - track: 2
+    mixerGroupName: Soundtrack
+    mixerGroup: {fileID: 5695887939140385887, guid: 6e0a68d583df788478f24006a0b6d51e,
+      type: 2}
+    audioSource: {fileID: 0}
+    volControlString: SoundtrackVol
+    numVoicesAssigned: 1
+  - track: 3
+    mixerGroupName: UI
+    mixerGroup: {fileID: -1548055916574507090, guid: 6e0a68d583df788478f24006a0b6d51e,
+      type: 2}
+    audioSource: {fileID: 0}
+    volControlString: UIVol
+    numVoicesAssigned: 5
+  - track: 4
+    mixerGroupName: Ambience
+    mixerGroup: {fileID: -949140525408802969, guid: 6e0a68d583df788478f24006a0b6d51e,
+      type: 2}
+    audioSource: {fileID: 0}
+    volControlString: AmbienceVol
+    numVoicesAssigned: 5
+  masterVolVar: {fileID: 11400000, guid: 043433df31825cf43abbceeb1fd1d410, type: 2}
+  soundtrackVolVar: {fileID: 11400000, guid: 94f0493bbd49b7e4cbb5b8985d023237, type: 2}

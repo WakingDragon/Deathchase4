@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Core/CoreScene.unity
+    guid: 9bf74690fecbdf340a84994090495524
+  - enabled: 1
+    path: Assets/Core/IntroScene/IntroCreditScene.unity
+    guid: 0391aa9c602443e4f9087b4205a1adf3
+  - enabled: 1
+    path: Assets/Core/MenuScene/MenuScene.unity
+    guid: ebda8c86404ee96429d8a40e38fa2ede
+  - enabled: 1
+    path: Assets/Deathchase/DeathchaseGame.unity
+    guid: 21c30d18d279c7d4186e6e548f922faf
+  - enabled: 1
+    path: Assets/UI/UI.unity
+    guid: db8e4189f189ecf4e9bee5f71026c576
+  m_configObjects: {}

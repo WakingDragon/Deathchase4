@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5480016c3ee024c9069b286d47228a, type: 3}
+  m_Name: bigExplosion_cue
+  m_EditorClassIdentifier: 
+  track: 1
+  clips:
+  - {fileID: 8300000, guid: 2996e50f97111af4196d82e94f0b470e, type: 3}
+  - {fileID: 8300000, guid: 1b9ca2c677f497c4d912a93d92366d1a, type: 3}
+  - {fileID: 8300000, guid: aec647929437ff742a83d4cf6cd8a5be, type: 3}
+  - {fileID: 8300000, guid: a5be5542388f1384fa29897acff6a77c, type: 3}
+  - {fileID: 8300000, guid: 925d264cfe4cc0c4d8824d8a95965520, type: 3}
+  randomizeVolPitch: 1
+  minVolume: 0.8
+  maxVolume: 1
+  minPitch: 0.8
+  maxPitch: 1.2
+  loop: 0
+  spatialBlend: 0

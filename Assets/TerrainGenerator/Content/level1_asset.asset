@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b09163ed12304e8b1db63b2bac06a, type: 3}
+  m_Name: level1_asset
+  m_EditorClassIdentifier: 
+  levelName: new level
+  groundMat: {fileID: 2100000, guid: 21d2c0a47770d23438dd34d207655c88, type: 2}
+  terrainVars: {fileID: 11400000, guid: 15eac086f686d234fb86938d11b73e2a, type: 2}
+  objectPool: {fileID: 11400000, guid: 6fce68d18039ad0499081a24ec1e33ed, type: 2}
+  perTileItems:
+  - itemAsset: {fileID: 11400000, guid: 5c34463326bb55049beee26cbf989707, type: 2}
+    numToSpawn: {x: 1, y: 3}
+  - itemAsset: {fileID: 11400000, guid: 5979221995ecdb84baa6b10ea93f22dc, type: 2}
+    numToSpawn: {x: 5, y: 10}
+  worldEnvironmentItems:
+  - itemAsset: {fileID: 0}
+    numToSpawn: {x: 0, y: 0}

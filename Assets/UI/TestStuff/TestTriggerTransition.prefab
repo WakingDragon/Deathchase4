@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8249129087916343273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907250166063631155}
+  - component: {fileID: 2093752516904218466}
+  - component: {fileID: 6886729527752953657}
+  - component: {fileID: 1573836725650408821}
+  m_Layer: 0
+  m_Name: TestTriggerTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &907250166063631155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249129087916343273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093752516904218466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249129087916343273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b747088992ab74196e2effafbb3a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTransitionEvent: {fileID: 11400000, guid: 046bd8b2d7e393e4f92fcae4dc0cb599,
+    type: 2}
+  endTransitionEvent: {fileID: 11400000, guid: 59ea3b562021fc440b0ab954214b0faa, type: 2}
+--- !u!114 &6886729527752953657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249129087916343273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d12bc070f02d3d40ab2b4a1219655ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_startCountdownEvent: {fileID: 11400000, guid: cf0bc427ae32bf247b157de187bc4d71,
+    type: 2}
+--- !u!114 &1573836725650408821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249129087916343273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4899fecab5ef215479ec6cfd9d4b16d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_showIntroEvent: {fileID: 11400000, guid: acba77d0f317cc0498eed6bc590fe425, type: 2}

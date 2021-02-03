@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e3325e791663943bab66d0278893ac, type: 3}
+  m_Name: L2_dcLevel
+  m_EditorClassIdentifier: 
+  groundMat: {fileID: 2100000, guid: 21d2c0a47770d23438dd34d207655c88, type: 2}
+  objectPool: {fileID: 11400000, guid: 6fce68d18039ad0499081a24ec1e33ed, type: 2}
+  perTileItems:
+  - itemAsset: {fileID: 11400000, guid: 5979221995ecdb84baa6b10ea93f22dc, type: 2}
+    numToSpawn: {x: 1, y: 3}
+  - itemAsset: {fileID: 11400000, guid: a39dedc00c9119c42a9b345ab1193148, type: 2}
+    numToSpawn: {x: 1, y: 3}
+  worldEnvironmentItems: []
+  m_levelName: Second Level
+  m_player: {fileID: 11400000, guid: 28a357407bcb5754c8038f3ec3e6a61b, type: 2}
+  m_baddies:
+  - {fileID: 11400000, guid: f7490099a82de264f86d001593d5d670, type: 2}
