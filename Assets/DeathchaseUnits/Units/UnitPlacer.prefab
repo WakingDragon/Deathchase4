@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_levelAsset: {fileID: 11400000, guid: 28174288d6d60544dacb522018df576f, type: 2}
-  m_dmgType: {fileID: 11400000, guid: 518cbc702d9735044a554e3c99d3bf54, type: 2}
+  m_dmgType: {fileID: 11400000, guid: df43edf92fa6e7342941564104170f5e, type: 2}
 --- !u!114 &2363353245209393756
 MonoBehaviour:
   m_ObjectHideFlags: 0

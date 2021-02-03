@@ -15,4 +15,4 @@ MonoBehaviour:
   m_ammoAsset: {fileID: 11400000, guid: f16f2daed1f12e647ad555f72f6d31fb, type: 2}
   m_launchFX: {fileID: 11400000, guid: 8a57204a2ce0f9a438fd1d769fa6d54b, type: 2}
   m_impactFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
-  m_fireInterval: 2
+  m_fireInterval: 3

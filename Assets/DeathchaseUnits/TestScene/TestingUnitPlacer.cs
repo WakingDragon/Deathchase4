@@ -6,7 +6,7 @@ using BP.Units.Weapons;
 
 namespace BP.Units
 {
-    public class UnitPlacer : MonoBehaviour
+    public class TestingUnitPlacer : MonoBehaviour
     {
         //[SerializeField] private GameObject m_unitPrefab = null;
         [SerializeField] private DCLevelAsset m_levelAsset = null;

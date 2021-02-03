@@ -2,15 +2,13 @@ FUN!
 1. chasing around in madcap way trying to get the baddies without smashing into stuff
 2. loads of cartoonish weps and silly things like that
 
+icollidable is the stationary object
 
 
 TODO
 focus on units and weapons for now!
-> enemies ragdoll when destroyed and crash to the ground in explosion of bits
-> cam stays focused on watching player die - use state stuff for this
-> semi and fully guided missiles
-> trailing smoke/evidence of severe damage
 > slowdown when enemy unit destroyed
+> sort out UnitPlacer > TestUnitPlacer and setup unitplacer for actual game
 
 > enable pooling of units - make them fit IPoolableAsset
 > level up when win condition met

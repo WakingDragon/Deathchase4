@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BP.ObjectPooling;
+using BP.Core;
 
 namespace BP.Units.Weapons
 {
@@ -24,6 +25,12 @@ namespace BP.Units.Weapons
                 {
                     iDamageable.TakeDmg(m_ammoAsset.BaseDmg(), m_ammoAsset.DamageType());
                 }
+                Impact(transform.position);
+            }
+
+            var iCollidable = other.gameObject.GetComponent<ICollidable>();
+            if(iCollidable != null)
+            {
                 Impact(transform.position);
             }
         }

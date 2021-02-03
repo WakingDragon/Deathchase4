@@ -12,19 +12,27 @@ namespace BP.Units
     public class UnitAsset : ScriptableObject
     {
         [SerializeField] private string m_unitName = "Some unit";
-        [SerializeField] private bool m_isPlayer = false;
+        [SerializeField] private Faction m_faction = null;
+
+        [Header("units stats")]
         [SerializeField] private float m_startingHealth = 100f;
         [SerializeField] private float m_altitudeToFly;
-        [SerializeField] private WeaponSlotItem[] m_weaponSlots;
-        [SerializeField] private bool m_autoFire = true;
-        [SerializeField] private Faction m_faction = null;
-        [SerializeField] private Vector3 m_colliderPos;
-        [SerializeField] private Vector3 m_colliderSize;
-        [SerializeField] private FXAsset m_deathFX = null;
         [SerializeField] private float m_speed = 30f;
         [SerializeField] private float m_rotSpeed = 80f;
         [SerializeField] private GameObject m_unitMeshPrefab = null;
         [SerializeField] private Vector3 m_meshLocalPos;
+
+        [Header("weps")]
+        [SerializeField] private WeaponSlotItem[] m_weaponSlots;
+        [SerializeField] private bool m_autoFire = true;
+
+        [Header("colliders and rbs")]
+        [SerializeField] private Vector3 m_colliderPos;
+        [SerializeField] private Vector3 m_colliderSize;
+
+        [Header("player things")]
+        [SerializeField] private bool m_isPlayer = false;
+        [SerializeField] private Vector2GameEvent m_unitHealthChangeEvent = null;
 
         [Header("baddie things")]
         [SerializeField] private Transform_listSet m_npcList = null;
@@ -32,9 +40,11 @@ namespace BP.Units
         [SerializeField] private TerrainVars_asset m_terrainVars = null;
         [SerializeField] private GameObject m_targetIndicator = null;
 
+        [Header("fx")]
+        [SerializeField] private FXAsset m_deathFX = null;
+
         [Header("dependencies")]
         [SerializeField] private GameObject m_genericUnitPrefab = null;
-        [SerializeField] private Vector2GameEvent m_unitHealthChangeEvent = null;
         [SerializeField] private VoidGameEvent m_unitDeathEvent = null;
         [SerializeField] private ObjectPoolAsset m_pool;
         [SerializeField] private VoidGameEvent m_camShakeEvent = null;
@@ -43,7 +53,6 @@ namespace BP.Units
         public ObjectPoolAsset ObjectPoolAsset() { return m_pool; }
         public Transform_listSet NPCListSet() { return m_npcList; }
         
-
         #region assembly
         public UnitBuilder SpawnAndAssembleUnitAt(Vector3 spawnPoint, bool gotoIdle, bool gotoPlay)
         {

@@ -15,17 +15,17 @@ MonoBehaviour:
   m_unitName: purple guy
   m_isPlayer: 0
   m_startingHealth: 100
-  m_altitudeToFly: 10
+  m_altitudeToFly: 7
   m_weaponSlots:
   - location: {x: 0, y: 0.2, z: -0.5}
     slotType: 2
     defaultWeapon: {fileID: 11400000, guid: cbeafe61a1c643344b6c014da68614b8, type: 2}
-  m_autoFire: 1
+  m_autoFire: 0
   m_faction: {fileID: 11400000, guid: eea8414aaa5545048a9ec3baf9831c78, type: 2}
   m_colliderPos: {x: 0, y: 0.85, z: 0.45}
   m_colliderSize: {x: 3.7, y: 2.1, z: 4.4}
   m_deathFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
-  m_speed: 28
+  m_speed: 30
   m_rotSpeed: 80
   m_unitMeshPrefab: {fileID: 7894743212229048539, guid: 79602031f50b2d74ca5c760ad052ed00,
     type: 3}

@@ -13,7 +13,7 @@ namespace BP.Deathchase
         [SerializeField] private bool m_activateOnStart = false;
         [SerializeField] private int m_startingLives = 3;
         private int m_currentLives;
-        private UnitPlacer m_unitPlacer;
+        private TestingUnitPlacer m_unitPlacer;
 
         private enum DCCurrentState
         {
@@ -63,7 +63,7 @@ namespace BP.Deathchase
             if (!m_terrainGen) { Debug.Log("terrain generation not found by scene controller"); }
             //m_state = GetComponent<DCGameState>();
             //if (!m_state) { Debug.Log("state component not found by scene controller"); }
-            m_unitPlacer = GetComponent<UnitPlacer>();
+            m_unitPlacer = GetComponent<TestingUnitPlacer>();
             if (!m_unitPlacer) { Debug.Log("unit placer component not found by scene controller"); }
 
             m_currentLives = m_startingLives;

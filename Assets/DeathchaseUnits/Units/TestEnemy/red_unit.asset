@@ -15,7 +15,7 @@ MonoBehaviour:
   m_unitName: Some unit
   m_isPlayer: 0
   m_startingHealth: 100
-  m_altitudeToFly: 10
+  m_altitudeToFly: 7
   m_weaponSlots:
   - location: {x: 0, y: 0.2, z: -0.5}
     slotType: 2

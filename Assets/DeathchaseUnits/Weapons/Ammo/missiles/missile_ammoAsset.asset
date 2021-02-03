@@ -16,11 +16,11 @@ MonoBehaviour:
     type: 3}
   m_defaultNumberToPool: 5
   m_expandablePool: 1
-  m_autoRepoolLife: 2
-  m_ammoSpeed: 10
+  m_autoRepoolLife: 0
+  m_ammoSpeed: 3
   m_damageType: {fileID: 11400000, guid: df43edf92fa6e7342941564104170f5e, type: 2}
   m_baseDamage: 10
-  m_lifespan: 2
-  m_scanRadius: 10
-  m_effectDuration: 1
+  m_lifespan: 3
+  m_scanRadius: 100
   m_scanInterval: 0.5
+  m_turnSpeed: 8
