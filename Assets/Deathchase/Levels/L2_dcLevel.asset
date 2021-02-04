@@ -22,4 +22,7 @@ MonoBehaviour:
   worldEnvironmentItems: []
   m_levelName: Second Level
   m_player: {fileID: 11400000, guid: 28a357407bcb5754c8038f3ec3e6a61b, type: 2}
-  m_baddies: []
+  m_baddies:
+  - {fileID: 11400000, guid: f7490099a82de264f86d001593d5d670, type: 2}
+  - {fileID: 11400000, guid: f7490099a82de264f86d001593d5d670, type: 2}
+  - {fileID: 11400000, guid: f7490099a82de264f86d001593d5d670, type: 2}

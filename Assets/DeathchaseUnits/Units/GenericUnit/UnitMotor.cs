@@ -14,10 +14,11 @@ namespace BP.Units
         private float m_altitude = 2f;
         private Rigidbody m_rb;
         private UnitAnimation m_animation;
+        private bool m_motorRunning;
 
         private void LateUpdate()
         {
-            if (m_state == UnitStateType.alive)
+            if (m_motorRunning && m_state == UnitStateType.alive)
             {
                 Move();
             }
@@ -47,19 +48,18 @@ namespace BP.Units
 
         private void OnEnterIdleState()
         {
-            m_rb.useGravity = false;
-            m_rb.isKinematic = true;
+            m_motorRunning = false;
         }
 
         private void OnEnterAliveState()
         {
             transform.position = new Vector3(transform.position.x, m_altitude, transform.position.z);
+            m_motorRunning = true;
         }
 
         private void OnEnterDeadState()
         {
-            m_rb.useGravity = true;
-            m_rb.isKinematic = false;
+            m_motorRunning = false;
         }
         #endregion
 
@@ -77,11 +77,14 @@ namespace BP.Units
         }
         #endregion
 
+        public void ToggleMotor(bool motorRunning)
+        {
+            m_motorRunning = motorRunning;
+        }
         private void Move()
         {
             transform.Translate(Vector3.forward * m_speed * Time.deltaTime, Space.Self);
         }
-
         public void XAxis(float x)
         {
             if (m_state != UnitStateType.alive) { return; }

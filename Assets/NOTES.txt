@@ -2,12 +2,34 @@ FUN!
 1. chasing around in madcap way trying to get the baddies without smashing into stuff
 2. loads of cartoonish weps and silly things like that
 
-icollidable is the stationary object
 
 
 TODO
-focus on units and weapons for now!
-> slowdown when enemy unit destroyed
+AUDIO:
+> audio event management properly: 
+cue is added to a list of active sounds, when sound is completed it is removed
+sounds can be played by remote sources i.e. spatial acoustics
+sounds can loop (e.g. the motor noise)
+sounds that drop out of the top list for their channel are stopped until there is room again
+use the priority system to ensure key sounds do not get bumped 
+
+possible item to catalogue:
+AudioItem
+{
+	cue
+	timetocomplete
+	isplaying
+	source
+}
+
+process...
+1. cue sends sound to AM (audio manager) which creates an item
+2. AM checks through the relevant channel to see if there are any finished Items and clears these out prior to allocating the new sound
+3. AM assigns cue to join channel list at top of list based on priority (e.g. priority 3 sound would be added to the list  but if there were no spaces left it would bump off priorities 1-3)
+[bumping process] start with priority 1 sounds and look for the sound with least time left to play
+4. if more srcs are needed on the AM then these can be added through script but we start with just a few to start off with?
+
+
 > sort out UnitPlacer > TestUnitPlacer and setup unitplacer for actual game
 
 > enable pooling of units - make them fit IPoolableAsset
@@ -24,6 +46,7 @@ focus on units and weapons for now!
 > collisions
 > tidy up unitbuilder and asset use
 > spawn big stuff
+> get damage from iCollidable object
 > spawn chance drops
 > create weapons and ammo library which can then be referenced in UnitWeapons
 > object pooling improvements - make it use ipoolableasset as the key and not gameobject...?
@@ -37,10 +60,7 @@ focus on units and weapons for now!
 
 UI best practice: https://unity3d.com/how-to/unity-ui-optimization-tips
 
-AUDIO:
-spatial stuff: can just set spatial to zero to make lister relative pos irrelevant
-?? create a seperate audio IO which can be moved from scene to scene - could carry the listener AND the main srcs
-audio IO (with srcs) needs to follow the main camera (when there is one) ?? 
+
 
 
 

@@ -15,9 +15,7 @@ namespace BP.Units
         private UnitAnimation m_animation;
         private bool m_isPlayer;
         private Faction m_faction;
-        //private FXAsset m_deathFX;
         private ObjectPoolAsset m_pool;
-        //private VoidGameEvent m_camShakeEvent;
         private Vector2GameEvent m_playerHealthChangeEvent;
         private VoidGameEvent m_playerDeathEvent;
         private float m_currentHealth;
@@ -33,12 +31,8 @@ namespace BP.Units
             m_pool = m_asset.ObjectPoolAsset();
             m_faction = m_asset.Faction();
 
-            //m_camShakeEvent = m_asset.CamShakeEvent();
             m_playerHealthChangeEvent = m_asset.UnitHealthChangeEvent();
             m_playerDeathEvent = m_asset.UnitDeathEvent();
-
-            //m_deathFX = m_asset.DeathFX();
-            //m_pool.TryCreateNewPool(m_deathFX);
         }
 
         public void OnEnterNewUnitState(UnitStateType newState)
@@ -53,6 +47,7 @@ namespace BP.Units
                 case UnitStateType.alive:
                     break;
                 case UnitStateType.dead:
+                    OnEnterDeadState();
                     break;
                 default:
                     break;
@@ -64,6 +59,11 @@ namespace BP.Units
         {
             m_currentHealth = m_asset.StartingHealth();
             NotifyHealthChange();
+        }
+
+        private void OnEnterDeadState()
+        {
+            Debug.Log(gameObject.name + " is dead");
         }
 
         #region iDamageable
@@ -86,6 +86,7 @@ namespace BP.Units
         }
         #endregion
 
+        #region tasks
         private void NotifyHealthChange()
         {
             if (m_isPlayer)
@@ -93,5 +94,6 @@ namespace BP.Units
                 m_playerHealthChangeEvent.Raise(new Vector2(m_currentHealth, m_asset.StartingHealth()));
             }
         }
+        #endregion
     }
 }

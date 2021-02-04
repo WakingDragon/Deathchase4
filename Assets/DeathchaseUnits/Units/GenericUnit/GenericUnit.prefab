@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1500759636599021652}
   - component: {fileID: 2165078922909430819}
   - component: {fileID: 6432127392350640786}
+  - component: {fileID: 6499105258891679023}
   m_Layer: 0
   m_Name: GenericUnit
   m_TagString: Untagged
@@ -239,6 +240,18 @@ MonoBehaviour:
   m_togglePanWideOffsetEvent: {fileID: 11400000, guid: ecb439c60af91544aaa85039c7bd71df,
     type: 2}
   m_smokeFX: {fileID: 594640931867218413}
+--- !u!114 &6499105258891679023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775468785029912582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a54cff3579f184884ab3f56886d412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &595619023318230177
 PrefabInstance:
   m_ObjectHideFlags: 0

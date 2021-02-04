@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: gun2_gunWeapon
   m_EditorClassIdentifier: 
   m_ammoAsset: {fileID: 11400000, guid: d4adc4e942916954693a89ed139bf3f0, type: 2}
-  m_launchFX: {fileID: 11400000, guid: 8a57204a2ce0f9a438fd1d769fa6d54b, type: 2}
+  m_launchFX: {fileID: 11400000, guid: f5135ba52baa6dd4fb1a9f96d2880854, type: 2}
   m_impactFX: {fileID: 11400000, guid: 2619e99e90e90dc43a78e7292f482b56, type: 2}
   m_fireInterval: 0.3

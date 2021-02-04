@@ -25,9 +25,15 @@ MonoBehaviour:
   - location: {x: 0, y: 0.5, z: 6}
     slotType: 0
     defaultWeapon: {fileID: 11400000, guid: 702847156c34ea54098a74cb58155ec1, type: 2}
-  m_autoFire: 1
+  m_autoFire: 0
+  m_canHitCollidables: 1
   m_colliderPos: {x: 0, y: 0.5, z: 0.5}
   m_colliderSize: {x: 1.5, y: 1, z: 2}
+  m_isKinematic: 1
+  m_isTrigger: 1
+  m_useGravity: 0
+  m_impactDamageType: {fileID: 11400000, guid: 857cbbf02c61c0844b139c5697eafa07, type: 2}
+  m_collisionDetection: 3
   m_isPlayer: 1
   m_unitHealthChangeEvent: {fileID: 11400000, guid: 105b65fd888ce234994e1cff710fe7a7,
     type: 2}
@@ -38,6 +44,8 @@ MonoBehaviour:
   m_targetIndicator: {fileID: 6876133445828594769, guid: 7833aa6f15519a44c81b68372e1b3992,
     type: 3}
   m_deathFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
+  m_collisionFX: {fileID: 11400000, guid: 2a332caaa59050f4c8c47ebc566da602, type: 2}
+  m_motorSFX: {fileID: 11400000, guid: 35b25da0c15ba654b9c4fa2d36c39e85, type: 2}
   m_genericUnitPrefab: {fileID: 4775468785029912582, guid: 7912b116ad795ad4fb38e36fd6b66d1d,
     type: 3}
   m_unitDeathEvent: {fileID: 11400000, guid: ff343b8d8b1515c40ad2eedab61e4920, type: 2}

@@ -27,8 +27,14 @@ namespace BP.Units
         [SerializeField] private bool m_autoFire = true;
 
         [Header("colliders and rbs")]
+        [SerializeField] private bool m_canHitCollidables = false;
         [SerializeField] private Vector3 m_colliderPos;
         [SerializeField] private Vector3 m_colliderSize;
+        [SerializeField] private bool m_isKinematic = true;
+        [SerializeField] private bool m_isTrigger = true;
+        [SerializeField] private bool m_useGravity = false;
+        [SerializeField] private DamageType m_impactDamageType = null;
+        [SerializeField] private CollisionDetectionMode m_collisionDetection = CollisionDetectionMode.ContinuousSpeculative;
 
         [Header("player things")]
         [SerializeField] private bool m_isPlayer = false;
@@ -42,6 +48,8 @@ namespace BP.Units
 
         [Header("fx")]
         [SerializeField] private FXAsset m_deathFX = null;
+        [SerializeField] private FXAsset m_collisionFX = null;
+        [SerializeField] private AudioCue m_motorSFX = null;
 
         [Header("dependencies")]
         [SerializeField] private GameObject m_genericUnitPrefab = null;
@@ -69,11 +77,15 @@ namespace BP.Units
         {
             box.center = m_colliderPos;
             box.size = m_colliderSize;
+            box.isTrigger = m_isTrigger;
 
-            rb.isKinematic = true;
-            rb.useGravity = false;
-            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+            rb.isKinematic = m_isKinematic;
+            rb.useGravity = m_useGravity;
+            rb.collisionDetectionMode = m_collisionDetection;
         }
+        public bool CanHitCollidables() { return m_canHitCollidables; }
+        public bool IsKinematic() { return m_isKinematic; }
+        public bool IsTrigger() { return m_isTrigger; }
 
         public TerrainVars_asset TerrainVars() { return m_terrainVars; }
         public GameObject TargetIndicator() { return m_targetIndicator; }
@@ -84,10 +96,13 @@ namespace BP.Units
 
         public float StartingHealth() { return m_startingHealth; }
         public Faction Faction() { return m_faction; }
+        public DamageType ImpactDamageType() { return m_impactDamageType; }
         public VoidGameEvent CamShakeEvent() { return m_camShakeEvent; }
         public Vector2GameEvent UnitHealthChangeEvent() { return m_unitHealthChangeEvent; }
         public VoidGameEvent UnitDeathEvent() { return m_unitDeathEvent; }
         public FXAsset DeathFX() { return m_deathFX; }
+        public FXAsset CollisionFX() { return m_collisionFX; }
+        public AudioCue MotorSFX() { return m_motorSFX; }
 
         public bool AutoFire() { return m_autoFire; }
         public List<WeaponSlot> SetWeaponSlotsOnUnit(Transform unitTransform)

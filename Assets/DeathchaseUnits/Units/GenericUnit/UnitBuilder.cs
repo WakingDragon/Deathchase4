@@ -27,6 +27,7 @@ namespace BP.Units
         private BoxCollider m_collider;
         private UnitAnimation m_animation;
         private Faction m_faction;
+        private UnitCollisions m_collisions;
 
         [Header("dependencies")]
         //private Transform_listSet m_npcList;
@@ -86,31 +87,6 @@ namespace BP.Units
             if (gotoAlive) { SetNewUnitState(UnitStateType.alive); }
         }
 
-        private void AssembleSubComponents()
-        {
-            m_asset.SetColliderAndRBOnUnit(m_rb, m_collider);
-
-            m_brain.AssembleBrain(m_state, m_motor, m_asset);
-
-            m_motor.AssembleMotor(m_state, m_asset, m_rb, m_animation);
-
-            m_health.AssembleHealth(m_state, m_asset, this, m_animation);
-
-            if(m_isPlayer)
-            {
-                CreateCameraArm();
-            }
-
-            m_weapons.enabled = true;
-            m_weapons.SetupUnitWeapons(m_state,m_asset);
-
-            m_fireListener.enabled = m_isPlayer;
-            m_xAxisListener.enabled = m_isPlayer;
-            m_yAxisListener.enabled = m_isPlayer;
-
-            m_animation.AssembleAnimation(m_state, m_asset);
-        }
-
         private void GetComponents()
         {
             m_collider = GetComponent<BoxCollider>();
@@ -126,6 +102,14 @@ namespace BP.Units
                 Debug.Log("no rb on " + gameObject.name);
                 m_rb = gameObject.AddComponent<Rigidbody>();
             }
+
+            m_collisions = GetComponent<UnitCollisions>();
+            if (!m_collisions)
+            {
+                Debug.Log("no unitCollisions on " + gameObject.name);
+                m_collisions = gameObject.AddComponent<UnitCollisions>();
+            }
+            componentStates.Add(m_collisions);
 
             m_brain = GetComponent<UnitBrain>();
             if (!m_brain)
@@ -166,6 +150,32 @@ namespace BP.Units
                 m_animation = gameObject.AddComponent<UnitAnimation>();
             }
             componentStates.Add(m_animation);
+        }
+
+        private void AssembleSubComponents()
+        {
+            m_asset.SetColliderAndRBOnUnit(m_rb, m_collider);
+            m_collisions.AssembleCollisions(m_state, m_asset, this, m_rb, m_collider);
+
+            m_brain.AssembleBrain(m_state, m_motor, m_asset);
+
+            m_motor.AssembleMotor(m_state, m_asset, m_rb, m_animation);
+
+            m_health.AssembleHealth(m_state, m_asset, this, m_animation);
+
+            if(m_isPlayer)
+            {
+                CreateCameraArm();
+            }
+
+            m_weapons.enabled = true;
+            m_weapons.SetupUnitWeapons(m_state,m_asset);
+
+            m_fireListener.enabled = m_isPlayer;
+            m_xAxisListener.enabled = m_isPlayer;
+            m_yAxisListener.enabled = m_isPlayer;
+
+            m_animation.AssembleAnimation(m_state, m_asset);
         }
         #endregion
 
@@ -213,27 +223,25 @@ namespace BP.Units
             }
         }
 
-        //private void ActivateBuilder()
-        //{
-        //    if(m_isSetup)
-        //    {
-        //        //if (!m_isPlayer && m_npcList) { m_npcList.AddToList(transform); }
-        //        //m_motor.SetMoving(true);
-        //        m_isActivated = true;
-        //    }
-        //}
-
-        //private void OnDisable()
-        //{
-        //    //if (!m_isPlayer && m_npcList) { m_npcList.RemoveFromList(transform); }
-        //    //m_isActivated = false;
-        //}
-
         #region builder tasks
         private void CreateCameraArm()
         {
             var arm = GetComponentInChildren<CameraArm>();
             if (!arm) { Instantiate(m_cameraArmPrefab, transform); }
+        }
+
+        public IEnumerator DoCollision()
+        {
+            m_health.TakeDmg(30f, m_asset.ImpactDamageType());
+            m_motor.ToggleMotor(false);
+            m_animation.CollisionAnimation();
+            m_collisions.ToggleCollisionDetection(false);
+
+            yield return new WaitForSeconds(1f);
+            m_motor.ToggleMotor(true);
+
+            yield return new WaitForSeconds(0.5f);
+            m_collisions.ToggleCollisionDetection(true);
         }
 
         public void OnUnitDies()

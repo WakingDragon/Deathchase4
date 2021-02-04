@@ -15,10 +15,12 @@ namespace BP.Units
         private bool m_isSetup;
         private ObjectPoolAsset m_pool;
         private FXAsset m_deathFX;
+        private FXAsset m_collisionFX;
         private VoidGameEvent m_camShakeEvent;
         public BoolGameEvent m_togglePanWideOffsetEvent;    //move to asset
         public GameObject m_smokeFX;    //maybe just make part of the model like lights
         private bool m_hasHighDamage = false;
+        private AudioCue m_motorSFX;
 
         public void AssembleAnimation(UnitStateType state, UnitAsset asset)
         {
@@ -26,7 +28,9 @@ namespace BP.Units
             m_state = state;
             m_pool = m_asset.ObjectPoolAsset();
             m_deathFX = m_asset.DeathFX();
+            m_collisionFX = m_asset.CollisionFX();
             m_camShakeEvent = m_asset.CamShakeEvent();
+            m_motorSFX = m_asset.MotorSFX();
 
             m_mesh = m_asset.AddMeshToUnit(transform);
 
@@ -70,6 +74,7 @@ namespace BP.Units
         private void OnEnterPlayState()
         {
             if (m_asset.IsPlayer()) { m_togglePanWideOffsetEvent.Raise(false); }
+            if (m_motorSFX) { m_motorSFX.Play(); }
         }
 
         private void OnEnterDeadState()
@@ -84,7 +89,6 @@ namespace BP.Units
             if (m_asset.IsPlayer()) { m_togglePanWideOffsetEvent.Raise(true); }
 
             yield return new WaitForSeconds(3f);
-            //m_mesh.SetActive(false);
         }
         #endregion
 
@@ -122,6 +126,13 @@ namespace BP.Units
                 m_smokeFX.SetActive(false);
             }
             m_hasHighDamage = isHighDamage;
+        }
+
+        public void CollisionAnimation()
+        {
+            m_collisionFX.Play(transform.position, m_pool);
+            m_camShakeEvent.Raise();
+            transform.position = transform.position - (5f * transform.forward);
         }
         #endregion
     }

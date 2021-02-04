@@ -13,33 +13,40 @@ MonoBehaviour:
   m_Name: red_unit
   m_EditorClassIdentifier: 
   m_unitName: Some unit
-  m_isPlayer: 0
+  m_faction: {fileID: 11400000, guid: eea8414aaa5545048a9ec3baf9831c78, type: 2}
   m_startingHealth: 100
   m_altitudeToFly: 7
-  m_weaponSlots:
-  - location: {x: 0, y: 0.2, z: -0.5}
-    slotType: 2
-    defaultWeapon: {fileID: 11400000, guid: cbeafe61a1c643344b6c014da68614b8, type: 2}
-  m_autoFire: 1
-  m_faction: {fileID: 11400000, guid: eea8414aaa5545048a9ec3baf9831c78, type: 2}
-  m_colliderPos: {x: 0, y: 0.85, z: 0.45}
-  m_colliderSize: {x: 3.7, y: 2.1, z: 4.4}
-  m_deathFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
   m_speed: 28
   m_rotSpeed: 60
   m_unitMeshPrefab: {fileID: 7894743212229048539, guid: 057cc93378e85d24ca58ee20686bb68d,
     type: 3}
   m_meshLocalPos: {x: 0, y: 0.5, z: 0}
+  m_weaponSlots:
+  - location: {x: 0, y: 0.2, z: -0.5}
+    slotType: 2
+    defaultWeapon: {fileID: 11400000, guid: cbeafe61a1c643344b6c014da68614b8, type: 2}
+  m_autoFire: 1
+  m_canHitCollidables: 0
+  m_colliderPos: {x: 0, y: 0.85, z: 0.45}
+  m_colliderSize: {x: 3.7, y: 2.1, z: 4.4}
+  m_isKinematic: 1
+  m_isTrigger: 1
+  m_useGravity: 0
+  m_impactDamageType: {fileID: 11400000, guid: 857cbbf02c61c0844b139c5697eafa07, type: 2}
+  m_collisionDetection: 3
+  m_isPlayer: 0
+  m_unitHealthChangeEvent: {fileID: 11400000, guid: 105b65fd888ce234994e1cff710fe7a7,
+    type: 2}
   m_npcList: {fileID: 11400000, guid: f28273ffd19b09c4495f8c22e3a32102, type: 2}
   m_allBaddiesDeadEvent: {fileID: 11400000, guid: cbb1e7f2e567c7f48b27ede4a5a3b727,
     type: 2}
   m_terrainVars: {fileID: 11400000, guid: 15eac086f686d234fb86938d11b73e2a, type: 2}
   m_targetIndicator: {fileID: 6876133445828594769, guid: 7833aa6f15519a44c81b68372e1b3992,
     type: 3}
+  m_deathFX: {fileID: 11400000, guid: 9f623447c1c46f84092ef06d69d3dc8b, type: 2}
+  m_collisionFX: {fileID: 0}
   m_genericUnitPrefab: {fileID: 4775468785029912582, guid: 7912b116ad795ad4fb38e36fd6b66d1d,
     type: 3}
-  m_unitHealthChangeEvent: {fileID: 11400000, guid: 105b65fd888ce234994e1cff710fe7a7,
-    type: 2}
   m_unitDeathEvent: {fileID: 11400000, guid: ff343b8d8b1515c40ad2eedab61e4920, type: 2}
   m_pool: {fileID: 11400000, guid: 6fce68d18039ad0499081a24ec1e33ed, type: 2}
   m_camShakeEvent: {fileID: 11400000, guid: 92ef726b9d03990478cc325cc8431c66, type: 2}
